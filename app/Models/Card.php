@@ -14,7 +14,7 @@ class Card extends Model
         return [
             'uuid' => 'string',
             'name' => 'string',
-            'team' => 'integer',
+            'team' => 'string',
             'set' => 'string',
             'card_number' => 'string',
             'variation' => 'string',

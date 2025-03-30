@@ -9,6 +9,7 @@ class Create extends Component
 {
     public function render(): View
     {
-        return view('livewire.card.create');
+        return view('livewire.card.create')
+            ->title('Create Card');
     }
 }

@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
+use App\Observers\CardObserver;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Model;
 
+#[ObservedBy(CardObserver::class)]
 class Card extends Model
 {
     protected function casts(): array

@@ -26,7 +26,7 @@
                         {{ __('Dashboard') }}
                     </flux:navlist.item>
                     <flux:navlist.item
-                        icon="home"
+                        icon="plus-circle"
                         :href="route('cards.create')"
                         :current="request()->routeIs('cards.create')"
                         wire:navigate

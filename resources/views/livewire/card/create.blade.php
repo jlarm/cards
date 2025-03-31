@@ -1,19 +1,25 @@
 <div class="mx-auto max-w-2xl">
-    <form class="space-y-3">
+    <form wire:submit.prevent="addCard" class="space-y-3">
         <flux:field>
-            <flux:label>Player Name</flux:label>
+            <flux:label>
+                Player Name
+                <span class="text-red-500">*</span>
+            </flux:label>
 
-            <flux:input size="sm" wire:model="form.playerName" type="text" />
+            <flux:input size="sm" wire:model="form.name" type="text" />
 
-            <flux:error name="playerName" />
+            <flux:error name="name" />
         </flux:field>
 
         <flux:field>
-            <flux:label>Team Name</flux:label>
+            <flux:label>
+                Team Name
+                <span class="text-red-500">*</span>
+            </flux:label>
 
-            <flux:input size="sm" wire:model="form.teamName" type="text" />
+            <flux:input size="sm" wire:model="form.team" type="text" />
 
-            <flux:error name="teamName" />
+            <flux:error name="team" />
         </flux:field>
 
         <flux:field>
@@ -67,17 +73,17 @@
         <flux:field>
             <flux:label>Estimated Price</flux:label>
 
-            <flux:input size="sm" wire:model="form.estimatedPrice" type="text" placeholder="99.99" />
+            <flux:input size="sm" wire:model="form.estimated_price" type="text" placeholder="99.99" />
 
-            <flux:error name="estimatedPrice" />
+            <flux:error name="estimated_price" />
         </flux:field>
 
         <flux:field>
             <flux:label>Purchase Price</flux:label>
 
-            <flux:input size="sm" wire:model="form.purchasedPrice" type="text" placeholder="99.99" />
+            <flux:input size="sm" wire:model="form.purchased_price" type="text" placeholder="99.99" />
 
-            <flux:error name="purchasedPrice" />
+            <flux:error name="purchased_price" />
         </flux:field>
 
         <flux:field>
@@ -92,9 +98,9 @@
             <flux:field>
                 <flux:label>Sold Price</flux:label>
 
-                <flux:input size="sm" wire:model="form.soldPrice" type="text" placeholder="99.99" />
+                <flux:input size="sm" wire:model="form.sold_price" type="text" placeholder="99.99" />
 
-                <flux:error name="soldPrice" />
+                <flux:error name="sold_price" />
             </flux:field>
 
             <flux:field>
@@ -122,6 +128,6 @@
             <flux:error name="notes" />
         </flux:field>
 
-        <flux:button variant="primary">Submit</flux:button>
+        <flux:button type="submit" variant="primary">Submit</flux:button>
     </form>
 </div>

@@ -31,22 +31,22 @@ class CardForm extends Form
     #[Validate(['nullable', 'string', 'max:255'])]
     public $condition = '';
 
-    #[Validate(['nullable', 'integer'])]
-    public $estimated_price = '';
+    #[Validate(['nullable'])]
+    public $estimated_price;
 
-    #[Validate(['nullable', 'integer'])]
-    public $purchase_price = '';
+    #[Validate(['nullable'])]
+    public $purchase_price;
 
     #[Validate(['nullable', 'string', 'max:255'])]
     public $status = '';
 
-    #[Validate(['nullable', 'integer'])]
-    public $sold_price = '';
+    #[Validate(['nullable'])]
+    public $sold_price;
 
     #[Validate(['nullable', 'date'])]
     public $sold_date = '';
 
-    #[Validate(['nullable', 'file', 'mimes:jpg,jpeg', 'max:1024', 'image'])]
+    #[Validate(['nullable', 'file', 'mimes:jpg,jpeg'])]
     public $image = '';
 
     #[Validate(['nullable'])]
